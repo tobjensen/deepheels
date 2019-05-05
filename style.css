@@ -1,7 +1,14 @@
 .container {
   height: 100%;
-  max-width: 960px;
+  max-width: 350px;
   margin: auto;
+}
+@media (min-width: 480px) {
+	.container {
+		height: 100%;
+		max-width: 960px;
+		margin: auto;
+	}
 }
 .header {
 	display: flex;
@@ -10,20 +17,33 @@
 	align-items: flex-end;
 }
 .logo img {
-	margin-top: 30px;
-	margin-right: 5px;
-	height: 20px;
+	margin-top: 18px;
+	margin-right: 2px;
+	height: 15px;
 	float: left;
 }
 h1 {
 	float:left;
 	font-family: sans-serif;
-	margin-right: 50px;
+	margin-right: 10px;
 	font-weight: 600;
-	font-size: 2em;
+	font-size: 1.3em;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
 	color: #333;
+}
+@media (min-width: 550px) {
+	.logo img {
+		margin-top: 30px;
+		margin-right: 5px;
+		height: 20px;
+	}
+	h1 {
+		font-size: 2em;
+	}
+	label, select, .box {
+		margin-left: 25px;
+	}
 }
 .thin {
 	font-weight: 300;
@@ -31,12 +51,13 @@ h1 {
 .shoes {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-between;
 }
 .box {
 	width: 136px;
 	height: 136px;
 	position: relative;
-	margin: 25px;
+	margin: 10px;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 90%;
@@ -71,7 +92,7 @@ i:before {
 	font-size: 0.7em;
 }
 label {
-	margin-left: 25px;
+	margin-left: 10px;
 	margin-top: 25px;
 	font-family: sans-serif;
 	display: block;
@@ -88,5 +109,5 @@ select {
 	border-radius: 4px;
 	box-shadow: none;
 	box-sizing: border-box;
-	margin-left: 25px;
+	margin-left: 10px;
 }
