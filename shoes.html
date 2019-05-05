@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DeepShades</title>
+	<link rel="stylesheet" href="shoes.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="shoes.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<div>
+				<label for="shoes">Shoes on page</label>
+				<select onchange="getGrid(this)" id="shoes">
+					<option value="5">5 Shoes</option>
+					<option value="10">10 Shoes</option>
+					<option value="15">15 Shoes</option>
+					<option value="20">20 Shoes</option>
+				</select>
+			</div>
+			<h1>Deep<span class="thin">Shoes</span></h1>
+		</div>
+	</div>
+	<div class="container">
+		<div class="shoes">
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+.container {
+  height: 100%;
+  max-width: 960px;
+  margin: auto;
+}
+.header {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+h1 {
+	font-family: sans-serif;
+	margin-right: 50px;
+	font-weight: 600;
+	font-size: 2em;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	color: #333;
+}
+h1:before {
+    content: "\f0da";
+    font-family: FontAwesome;
+    left:-5px;
+}
+.thin {
+	font-weight: 300;
+}
+.shoes {
+	display: flex;
+	flex-wrap: wrap;
+}
+.box {
+	width: 136px;
+	height: 136px;
+	position: relative;
+	margin: 25px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 90%;
+	border: 1px solid #CCC;
+	padding: 30px 0;
+}
+
+i {
+	position:absolute;
+	bottom: 0;
+	right: 0;
+	margin: 10px;
+
+	display:inline-block;
+	padding: 5px 9px;
+
+	background:#ccc;
+	color:#000;
+	opacity: 0.5;
+	border-radius:50%;
+
+	transition:.2s;
+	cursor:pointer;
+}
+i:hover {
+	color:#666;
+}
+i:before {
+	font-family:fontawesome;
+	content:'\f004';
+	font-style:normal;
+	font-size: 0.7em;
+}
+label {
+	margin-left: 25px;
+	margin-top: 25px;
+	font-family: sans-serif;
+	display: block;
+	margin-bottom: .5rem;
+	font-weight: 600;
+	font-size: 0.8em;
+	text-transform: uppercase;
+}
+select {
+	height: 38px;
+	width: 138px;
+	background-color: #fff;
+	border: 1px solid #D1D1D1;
+	border-radius: 4px;
+	box-shadow: none;
+	box-sizing: border-box;
+	margin-left: 25px;
+}
