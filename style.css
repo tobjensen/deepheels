@@ -9,7 +9,14 @@
 	justify-content: space-between;
 	align-items: flex-end;
 }
+.logo img {
+	margin-top: 30px;
+	margin-right: 5px;
+	height: 20px;
+	float: left;
+}
 h1 {
+	float:left;
 	font-family: sans-serif;
 	margin-right: 50px;
 	font-weight: 600;
@@ -17,11 +24,6 @@ h1 {
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
 	color: #333;
-}
-h1:before {
-    content: "\f0da";
-    font-family: FontAwesome;
-    left:-5px;
 }
 .thin {
 	font-weight: 300;
