@@ -1,10 +1,14 @@
 import random
 import boto3
 
-table = boto3.resource('dynamodb', region_name='us-east-1').Table('shoes')
+table_name = 'deepheels'
+aws_region = 'us-east-1'
+
+table = boto3.resource('dynamodb', region_name=aws_region).Table(table_name)
 
 def lambda_handler(event, context):
     print(event)
+    
     like = str(event['like'])
     liked = event['liked']
     grid = event['grid']
