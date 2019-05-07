@@ -8,7 +8,7 @@ function getGrid(select){
 		data: JSON.stringify({'grid_size': gridSize}),
 		success: function ( data ) {
 			for (i = 0; i < gridSize; i++) {
-				url = 'https://s3.amazonaws.com/deepheels/' + data["grid"][i] + '.jpg'
+				url = 'https://s3.amazonaws.com/deepheels/img/' + data["grid"][i] + '.jpg'
 				$('.shoes').append(`
 					<div 
 					class = "box" 
