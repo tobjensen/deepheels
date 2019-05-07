@@ -2,7 +2,9 @@
 
 Discover fab heels and cool kicks by selecting styles you like. 
 
-[ML Jupyter Notebook](https://github.com/aws-samples/aws-sagemaker-pytorch-shop-by-style) – [Shoe dataset](http://vision.cs.utexas.edu/projects/finegrained/utzap50k/) – [Website demo](http://deepheels.s3-website-us-east-1.amazonaws.com/)
+[Website demo](http://deepheels.s3-website-us-east-1.amazonaws.com/)
+
+[ML Jupyter Notebook](https://github.com/aws-samples/aws-sagemaker-pytorch-shop-by-style) – [Shoe dataset](http://vision.cs.utexas.edu/projects/finegrained/utzap50k/)
 
 ## Getting Started
 
@@ -13,7 +15,7 @@ These instructions will get you a copy of the project up and running on AWS.
 What you'll need to get started:
 * [AWS Account](https://aws.amazon.com/)
 * [Boto 3](https://pypi.org/project/boto3/), installed and configured
-* (Optional) Use [our dataset](https://github.com/tobjensen/deepheels/blob/master/dynamodb/data.json) from this repo or train your own with dataset with this [ML Jupyter Notebook](https://github.com/aws-samples/aws-sagemaker-pytorch-shop-by-style)
+* (Optional) Use the [dataset](https://github.com/tobjensen/deepheels/blob/master/dynamodb/data.json) from this repo or train your own with dataset with this [ML Jupyter Notebook](https://github.com/aws-samples/aws-sagemaker-pytorch-shop-by-style)
 
 ### Installing
 
@@ -43,25 +45,6 @@ table = dynamodb.create_table(
         'WriteCapacityUnits': 1
     }
 )
-```
-
-Populate the DynamoDB table with the [data](https://github.com/tobjensen/deepheels/blob/master/dynamodb/data.json)
-```
-import boto3
-import json
-
-json_file = 'data.json'
-table_name = 'deepheels'
-aws_region = 'us-east-1'
-
-table = boto3.resource('dynamodb', region_name=aws_region).Table(table_name)
-
-with open(json_file) as f:
-	data = json.load(f)
-
-with table.batch_writer() as batch:
-	for item in data:
-		batch.put_item(Item = item)
 ```
 
 Populate the DynamoDB table with the [data](https://github.com/tobjensen/deepheels/blob/master/dynamodb/data.json)
@@ -142,7 +125,7 @@ for function in ('grid', 'like'):
 
 Set up an API endpoint with API Gateway.
 
-Below are the steps to set up the API endpoint through the console.
+Below are the steps to set up the API endpoint through the [console](https://console.aws.amazon.com/apigateway).
 You can leave all the defaults as they are.
 
 You'll do this twice, one for each Lambda functions.
