@@ -47,7 +47,7 @@ $(document).on('click', 'i', function() {
 		data: JSON.stringify(data),
 		success: function ( data ) {
 			for (i = 0; i < data['changes'].length; i++) {
-				url = 'https://s3.amazonaws.com/deepheels/' + data['changes'][i]['id'] + '.jpg'
+				url = 'https://s3.amazonaws.com/deepheels/img/' + data['changes'][i]['id'] + '.jpg'
 				$(`.box:eq(${data['changes'][i]['position']})`).css( { "background-image": `url( ${url}` } )
 				$(`.box:eq(${data['changes'][i]['position']})`).data('id', data['changes'][i]['id'] )
 			}
